@@ -1,4 +1,4 @@
 {
-  "mongoURI": "",
+  "mongoURI": "mongodb+srv://skfaizan2301:lROAIu9RKnkhdqWu @cluster0.4vkrr3u.mongodb.net/?retryWrites=true&w=majority",
   "flutter__secret": "flutter__secret"
 }
