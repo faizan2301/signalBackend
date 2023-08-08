@@ -7,7 +7,11 @@ const http = require("http");
 const socketio = require("socket.io");
 
 const app = express();
+<<<<<<< HEAD
 
+=======
+//
+>>>>>>> 5e03dfa (Ok)
 const server = http.createServer(app);
 const io = socketio(server).sockets;
 
