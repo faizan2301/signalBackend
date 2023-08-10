@@ -7,14 +7,6 @@ const http = require("http");
 const socketio = require("socket.io");
 
 const app = express();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-//
->>>>>>> 5e03dfa (Ok)
-=======
->>>>>>> 2dfa06d (Some changes)
 const server = http.createServer(app);
 const io = socketio(server).sockets;
 
