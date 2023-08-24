@@ -9,21 +9,20 @@ const socketio = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server).sockets;
-
+const userRoutes = "./routes/login.js";
 // * BorderParser Middleware
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }));
 // * Load Env
-dotenv.config({ path: "./config.env" });
-
+dotenv.config({ path: "./config/.env" });
+app.use(userRoutes);
 // * Connect DB
 const db = config.get("mongoURI");
+console.log(db);
 mongoose
   .connect(db, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
   })
   .then(() => console.log("Mongodb is connected..."))
   .catch((err) => console.log(err));
